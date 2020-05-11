@@ -26,7 +26,7 @@ function getNews(news){
         news.articles.forEach(article=>{
           output+= 
             ` <section class="card">
-              <li class="article"><a class="article-link" href="${article.url}" target="_blank">       
+              <li class="articles"><a class="article-link" href="${article.url}" target="_blank">       
               <img src="${article.urlToImage}" class="article-img" alt="${article.title}"></img>
               <div class="container">
               <h2 class="article-title">${article.title}</h2><br>
@@ -36,13 +36,14 @@ function getNews(news){
               </div>
               </li>
               </section>
-            `;
+             `;
+           
         });
         content.innerHTML=output;
       }
       else
         { 
-           content.innerHTML='<li class="not-found">No article was found based on the search.</li>';
+           content.innerHTML='<li class="not-founded">No article was found based on the search.</li>';
        }
     }
 

@@ -43,12 +43,15 @@ body{
    
 }
 
-.not-found{
+.not-founded{
    font-size:30px;
    color:white;
    width:100%;
    margin-left:30%;
    list-style:none;
+}
+.not-found{
+   visibility: hidden;
 }
 
  .card{
@@ -90,9 +93,15 @@ body{
 .article-description{
    color:white;
    font-size:20px;
+   list-style:none;
 }
 
-article{
+.article{
+   list-style: none;
+   visibility: hidden;
+}
+
+.articles{
    list-style: none;
 }
 #loader {
