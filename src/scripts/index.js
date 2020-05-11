@@ -29,10 +29,10 @@ function getNews(news){
               <li class="articles"><a class="article-link" href="${article.url}" target="_blank">       
               <img src="${article.urlToImage}" class="article-img" alt="${article.title}"></img>
               <div class="container">
-              <h2 class="article-title">${article.title}</h2><br>
-              <p class="article-description">${article.description || "Description not available"}</p> <br>
-              <span class="article-author">-${article.author? article.author: "Anon"}</span><br>
-              </a>
+                 <h2 class="article-title">${article.title}</h2><br>
+                 <p class="article-description">${article.description || "Description not available"}</p> <br>
+                 <span class="article-author">-${article.author? article.author: "Anon"}</span><br>
+                 </a>
               </div>
               </li>
               </section>
