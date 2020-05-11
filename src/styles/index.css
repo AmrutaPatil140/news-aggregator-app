@@ -114,7 +114,7 @@ body{
    height: 120px;
    animation: spin 2s linear infinite;
  }
- li{
+ li.article{
     list-style:none;
  }
  @keyframes spin {
