@@ -26,24 +26,23 @@ function getNews(news){
         news.articles.forEach(article=>{
           output+= 
             ` <section class="card">
-              <li class="articles"><a class="article-link" href="${article.url}" target="_blank">       
+              <li class="article"><a class="article-link" href="${article.url}" target="_blank">       
               <img src="${article.urlToImage}" class="article-img" alt="${article.title}"></img>
               <div class="container">
-                 <h2 class="article-title">${article.title}</h2><br>
-                 <p class="article-description">${article.description || "Description not available"}</p> <br>
-                 <span class="article-author">-${article.author? article.author: "Anon"}</span><br>
-                 </a>
+              <h2 class="article-title">${article.title}</h2><br>
+              <p class="article-description">${article.description || "Description not available"}</p> <br>
+              <span class="article-author">-${article.author? article.author: "Anon"}</span><br>
+              </a>
               </div>
               </li>
               </section>
-             `;
-           
+            `;
         });
         content.innerHTML=output;
       }
       else
         { 
-           content.innerHTML='<li class="not-founded">No article was found based on the search.</li>';
+           content.innerHTML='<li class="not-found">No article was found based on the search.</li>';
        }
     }
 
