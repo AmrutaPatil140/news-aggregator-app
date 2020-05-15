@@ -11,7 +11,7 @@ body{
  #main{
     text-align: center;
  }
- .site-title{
+ .header{
     color: white;
     text-transform: uppercase;
     display:inline-block;          
@@ -79,18 +79,24 @@ body{
    float: right;
    color:#00d4ff;
    font-family: Arial, Helvetica, sans-serif;
+   margin:5px;
 
 }
 .article-title{
    color:white;
+   margin:10px;
 }
 .article-description{
    color:white;
    font-size:20px;
+   margin:10px;
 }
 
 li{
    list-style: none;
+}
+h3{
+   visibility:hidden;
 }
 #loader {
    position:fixed;

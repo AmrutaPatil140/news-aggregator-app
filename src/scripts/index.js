@@ -26,19 +26,22 @@ function getNews(news){
       let output="";
       if(news.totalResults>0){
          news.articles.forEach(article=>{
-          output+= 
-            ` <section class="card">
-              <li class="article"><a class="article-link" href="${article.url}" target="_blank">       
-              <img src="${article.urlToImage}" class="article-img" alt="${article.title}"></img>
-              <div class="container">
-              <h2 class="article-title">${article.title}</h2><br>
-              <p class="article-description">${article.description || "Description not available"}</p> <br>
-              <span class="article-author">-${article.author? article.author: "Anon"}</span><br>
-              </a>
-              </div>
-              </li>
-              </section>
-            `;
+         let urlToImage = article.urlToImage;
+         let title = article.title;
+         let description = article.description;
+         let author = article.author;
+         let url1 = article.url;
+      output += `
+           <section class="card">
+           <li class="article">
+           <img src="${urlToImage}" class="article-img" alt="image not found">
+          <div>
+          <h2 class="article-title">${title}</h2>
+          <p class="article-description">${description}</p>
+          <p><span class="article-author"><a class="article-link" href="${url1}">${author}</a></span></p>
+          </div>
+          </li>
+          </section>`;
         });
        
         content.innerHTML=output;
@@ -64,32 +67,5 @@ function getNews(news){
  }
 window.open=getPosts();
 
-var ul = document.createElement("ul");
-ul.id = "news-articles";
-var news = document.querySelector("#news");
-news.appendChild(ul);
 
-
- var li = document.createElement("li");
-    li.className = "article";
-    ul.appendChild(li);
-    var a = document.createElement("a");
-    // a.setAttribute("href", data.articles[i].url);
-    a.className = "article-link";
-    li.appendChild(a);
-    var img = document.createElement("img");
-    img.className = "article-img";
-    //img.setAttribute("src", data.articles[i].urlToImage);
-    li.appendChild(img);
-    var h2 = document.createElement("h2");
-    //h2.innerHTML = data.articles[i].title;
-    h2.className = "article-title";
-    li.appendChild(h2);
-    var p = document.createElement("p");
-    //p.innerHTML = data.articles[i].description;
-    p.className = "article-description";
-    li.appendChild(p);
-    var span = document.createElement("span");
-   // span.innerHTML = data.articles[i].author;
-    span.className = "article-author";
-    li.appendChild(span);
+  
